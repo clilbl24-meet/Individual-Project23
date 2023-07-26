@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+	<div id="notif-bar">
+		<p> hello {{name}}!</p>
+		<a href="/home" class="notif">Home</a>
+		<a href='/fav_meals' class="notif"> favorite meals</a>
+		<a href="/signout" class="notif">signout</a>
+		
+	</div>
+<div>
+    <h1 class="title">welcome to Oldies {{name}}:)</h1>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2021/09/new_g_0002_RYM_0269.jpg"></img>
+</div>
+<div>
+    <h2> main course</h2>
+    
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2021/09/g_ten_0014_22658_%D7%90%D7%95%D7%9C%D7%93%D7%99%D7%A1_%D7%A8%D7%A2%D7%A0%D7%A0%D7%94-3-1.jpg"></img>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2021/09/new_g_0004_RYM_0160.jpg"></img>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2021/09/g_ten_0007_22658_%D7%90%D7%95%D7%9C%D7%93%D7%99%D7%A1_%D7%A8%D7%A2%D7%A0%D7%A0%D7%94-38-1.jpg"></img>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2021/09/new_g_0008_DD3A8526-1.jpg"></img>
+</div>
+    
+<div>
+    <h2>dessert</h2>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2021/09/g_ten_0001_22658_%D7%90%D7%95%D7%9C%D7%93%D7%99%D7%A1_%D7%A8%D7%A2%D7%A0%D7%A0%D7%94-98.jpg"></img>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2021/09/new_g_0006_IMG_6260.jpg"></img>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2020/03/gall_0009_AW0I5526.jpg"></img>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2020/03/gall_0007_AW0I5613.jpg"></img>
+</div>
+</form>
+
+<div> 
+	<form action='/home' method='POST'>
+		<div>
+		<h2>which is your favorite meal?</h2>
+		</br>
+		<input type="text" name="favmeal" maxlength="100">
+		<h2> how much would you rate it out of five?</h2>
+		<input type="radio" id="one" name="rating" value="one">
+    	<label for="one">1</label>
+    	<input type="radio" id="two" name="rating" value="two">
+    	<label for="two">2</label>
+    	<input type="radio" id="three" name="rating" value="three">
+    	<label for="three">3</label> 
+    	<input type="radio" id="four" name="rating" value="four">
+    	<label for="four">4</label>
+    	<input type="radio" id="five" name="rating" value="five">
+    	<label for="five">5</label> 
+    </br>
+    	<input class= "form" type="submit"/>
+		</div>
+	</form>
+	<button><a href='/fav_meals'>everyones favorite meal</a></button>
+
+	<a href="/add_meal">add meal</a>
+
+
+</body>
+</html>

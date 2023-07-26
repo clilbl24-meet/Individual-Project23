@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{meal['title']}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+        <div id="notif-bar">
+        <p> hello {{name}}!</p>
+        <a href="/home" class="notif">Home</a>
+        <a href='/fav_meals' class="notif"> favorite meals</a>
+        <a href="/signout" class="notif">signout</a>
+        
+    </div>
+    <div>
+    <h1>{{meal['title']}}</h1>
+    <img src="{{meal['img']}}"/>
+    <h2>{{meal['text']}}</h2>
+</div>
+</body>
+</html>

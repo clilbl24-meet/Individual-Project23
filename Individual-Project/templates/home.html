@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+	<div id="notif-bar">
+		<p> hello {{name}}!</p>
+		<a href="/home" class="notif">Home</a>
+		<a href='/fav_meals' class="notif"> favorite meals</a>
+		<a href="/signout" class="notif">signout</a>
+		
+	</div>
+<div>
+    <h1 class="title">welcome to Oldies {{name}}:)</h1>
+    <img src="https://oldiespancake.co.il/wp-content/uploads/sites/207/2021/09/new_g_0002_RYM_0269.jpg"></img>
+</div>
+<div>
+    <h2>our meals:</h2>
+    <h3 style="color: red;">{{ error }}</h3>
+    
+    {% for meal in all_meals %}
+    <a href="/meal/{{ meal }}">
+	    <img src="{{ all_meals[meal]['img'] }}">
+    </a>
+    {% endfor %}
+
+</div>
+
+<div> 
+	<form action='/home' method='POST'>
+		<div>
+		<h2>which is your favorite meal?</h2>
+		</br>
+		<select name="favmeal" placeholder="favorite meal ">
+		<option value="shakshuka" name="favmeal"> shakshuka</option>
+		<option value="goat pizza" name="favmeal"> goat pizza</option>
+		<option value="alfredo pancake" name="favmeal"> alfredo pancake</option>
+		<option value="oldies toast" name="favmeal"> oldies toast</option>
+		<option value="oreo pancake" name="favmeal"> oreo pancake</option>
+		<option value="blueberries pancake" name="favmeal"> blueberries pancake</option>
+		<option value="french pancake" name="favmeal"> french pancake</option>
+		<option value="kinder bueno pancake" name="favmeal"> kinder bueno pancake</option>
+	    </select>
+
+		<h2> how much would you rate it out of five?</h2>
+		<input type="radio" id="one" name="rating" value="one">
+    	<label for="one">1</label>
+    	<input type="radio" id="two" name="rating" value="two">
+    	<label for="two">2</label>
+    	<input type="radio" id="three" name="rating" value="three">
+    	<label for="three">3</label> 
+    	<input type="radio" id="four" name="rating" value="four">
+    	<label for="four">4</label>
+    	<input type="radio" id="five" name="rating" value="five">
+    	<label for="five">5</label> 
+    </br>
+    	<input class= "form" type="submit"/>
+		</div>
+	</form>
+	<button><a href='/fav_meals'>everyones favorite meal</a></button>
+
+	<!-- <a href="/add_meal">add meal</a> -->
+
+
+</body>
+</html>

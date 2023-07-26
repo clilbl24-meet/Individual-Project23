@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+	<title>favorite meals</title>
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+	        <div id="notif-bar">
+        <p> hello {{name}}!</p>
+        <a href="/home" class="notif">Home</a>
+        <a href='/fav_meals' class="notif"> favorite meals</a>
+        <a href="/signout" class="notif">signout</a>
+        
+    </div>
+	<div>
+	<h1 class="title">everyones favorite meals:</h1>
+
+	{%for favorite in favorites%}
+	<div class="reviews">
+	<h2>{{favorites[favorite]["username"]}} :</h2>
+	<h3>favorite meal - {{favorites[favorite]["meal"]}}</h3>
+	<h3>I rate it a {{favorites[favorite]["rating"]}}!</h3>	
+</div>
+	{%endfor%}
+</div>

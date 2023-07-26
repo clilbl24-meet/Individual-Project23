@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<title> signup</title>
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<h1 class="title"> register</h1>
+<form action='/signup' method='POST'>
+	<div>
+		<label class="formL">user name</label>
+	</br>
+		<input class="form" type="text" name="username" placeholder="enter username" required>
+	</div>
+
+	<div>
+		<label class="formL">email</label>
+	</br>
+		<input class="form" type="text" name="email" placeholder="enter email" required>
+	</div>
+
+	<div>
+		<label class="formL">first name</label>
+	</br>
+		<input class="form" type="text" name="firstname" placeholder="enter your name" required>
+	</div>
+
+	<div>
+		<label class="formL">password</label>
+	</br>
+		<input class="form" type="password" name="password" placeholder="pick a password" minlength="6" required>
+	</div>
+
+	<div>
+		<label class="formL">confirm password</label>
+	</br>
+		<input class= "form" type="password" name="confirm_password" placeholder="confirm password" required>
+	</div>
+	<div>
+		<input class="form" type="submit"/>
+	</div>
+
+
+
+
+
+
+
+
+</form>
+</body>
